@@ -11,7 +11,7 @@ const createDir = async (path) => {
     while (root.length) {
         try {
             start.push(root.shift())
-            console.log(start);
+            // console.log(start);
             await fs.mkdirSync(start.join('/'))
 
         } catch (error) {
@@ -20,7 +20,7 @@ const createDir = async (path) => {
     }
 }
 const createComponent = async (root,name) => {
-    console.log(root);
+    // console.log(root);
     const newName = name.charAt(0).toUpperCase()+name.slice(1)
     const date = new Date()
     let newDate = date.toLocaleDateString()
@@ -41,6 +41,8 @@ const createComponent = async (root,name) => {
         fs.writeFileSync(process.cwd()+`/src/components/${newName}/${newName}.tsx`, compTs)
         fs.writeFileSync(process.cwd()+`/src/components/${newName}/${newName}.css`, compCss)
     });
+    console.log(`Create : src/components/${newName}/${newName}.tsx`)
+    console.log(`Create : src/components/${newName}/${newName}.css`)
 
     // console.log(compTs);
 }
