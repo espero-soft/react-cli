@@ -41,8 +41,8 @@ const createComponent = async (root,name) => {
         fs.writeFileSync(process.cwd()+`/src/components/${newName}/${newName}.tsx`, compTs)
         fs.writeFileSync(process.cwd()+`/src/components/${newName}/${newName}.css`, compCss)
     });
-    console.log(`Create : src/components/${newName}/${newName}.tsx`)
-    console.log(`Create : src/components/${newName}/${newName}.css`)
+    console.log(`CREATE : src/components/${newName}/${newName}.tsx`)
+    console.log(`CREATE : src/components/${newName}/${newName}.css`)
 
     // console.log(compTs);
 }

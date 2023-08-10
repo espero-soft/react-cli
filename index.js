@@ -14,7 +14,6 @@ const action  = params.shift()
 
 if((action === "c") || (action === "components")){
     params.forEach(name => {
-        // console.log({root});
         createComponent(root,name)
     });
 }
