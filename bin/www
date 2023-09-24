@@ -1,0 +1,42 @@
+#!/usr/bin/env node
+
+const fs = require("fs")
+const path = require("path")
+const { createDir, createComponent, createPage, displayHelp, createGuard, createSimpleComponent } = require("../helpers/utils")
+
+const params = process.argv
+
+params.shift()
+const root = path.dirname(path.dirname(params.shift()))
+
+
+const action  = params.shift()
+
+
+
+if((action === "c") || (action === "components") || (action === "component")){
+    params.forEach(name => {
+        createComponent(root,name)
+    });
+}
+if((action === "cs")){
+    params.forEach(name => {
+        createSimpleComponent(root,name)
+    });
+}
+if((action === "p") || (action === "page")){
+    params.forEach(name => {
+        createPage(root,name)
+    });
+}
+if((action === "g") || (action === "guard")){
+    params.forEach(name => {
+        createGuard(root,name)
+    });
+}
+if((action === "--help") || (action === "-h")){
+    params.forEach(name => {
+        displayHelp(root,name)
+    });
+}
+

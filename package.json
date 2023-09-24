@@ -1,0 +1,24 @@
+{
+  "name": "mudey-react-cli",
+  "version": "1.1.0",
+  "description": "CLI for react App",
+  "main": "bin/www",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "preferGlobal": true,
+  "bin": {
+    "mudey-react-cli": "./bin/www"
+},
+  "keywords": [
+    "espero-soft",
+    "mudey",
+    "espero",
+    "akpoli"
+  ],
+  "engines": {
+    "node": ">= 0.12.0"
+},
+"author": "Espero-Soft Informatiques <contact@espero-soft.com>",
+  "license": "MIT"
+}
