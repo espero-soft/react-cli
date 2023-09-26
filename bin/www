@@ -2,7 +2,7 @@
 
 const fs = require("fs")
 const path = require("path")
-const { createDir, createComponent, createPage, displayHelp, createGuard, createSimpleComponent } = require("../helpers/utils")
+const { createDir, createComponent, createPage, displayHelp, createGuard, createSimpleComponent, createSimplePage } = require("../helpers/utils")
 
 const params = process.argv
 
@@ -22,6 +22,11 @@ if((action === "c") || (action === "components") || (action === "component")){
 if((action === "cs")){
     params.forEach(name => {
         createSimpleComponent(root,name)
+    });
+}
+if((action === "ps")){
+    params.forEach(name => {
+        createSimplePage(root,name)
     });
 }
 if((action === "p") || (action === "page")){
